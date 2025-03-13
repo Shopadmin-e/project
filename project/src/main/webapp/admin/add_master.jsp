@@ -6,23 +6,23 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>관리자 페이지</title>
+<title>관리자 등록 페이지</title>
 <link rel="stylesheet" type="text/css" href="./css/basic.css">
-<link rel="stylesheet" type="text/css" href="./css/mainlogin.css?v=3">
+<link rel="stylesheet" type="text/css" href="./css/login.css?v=1">
 <link rel="icon" href="./img/logo.png" sizes="128x128">
 <link rel="icon" href="./img/logo.png" sizes="64x64">
 <link rel="icon" href="./img/logo.png" sizes="32x32">
 <link rel="icon" href="./img/logo.png" sizes="16x16">
 </head>
-<body class="bodycss">
+<body>
 <!-- 상단 -->
-<%@ include file="./index_top.jsp" %>
+<%@ include file="./add_master_top.jsp" %>
 <!-- 상단 -->
 <!-- 메인 -->
-<%@ include file="./index_main.jsp" %>
+<%@ include file="./add_master_main.jsp" %>
 <!-- 메인 -->
 <!-- 카피라이터 -->
-<%@ include file="./index_copyright.jsp" %>
+<%@ include file="./add_master_copyright.jsp" %>
 <!-- 카피라이터 -->
 </body>
 </html>
