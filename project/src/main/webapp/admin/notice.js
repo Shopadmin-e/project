@@ -8,7 +8,6 @@ border_del.addEventListener("click", function(){
 	alert("공지사항 삭제");
 })*/
 
-//동작 안됨
 function sign(){
 	if(frm.mtitle.value==""){
 		alert("제목을 입력하세요");
@@ -20,13 +19,15 @@ function sign(){
 		frm.mname.focus();
 		return false;
 	}
-	else if(frm.mtext.value==""){
-		alert("내용을 입력하세요");
-		frm.mtext.focus();
-		return false;
-	}
 	else{
-		frm.submit();
+		if(frm.mtext.value==""){
+			alert("내용을 입력하세요");
+			frm.mtext.focus();
+			return false;			
+		}
+		else{
+			frm.submit();
+		}
 	}
 }
 
