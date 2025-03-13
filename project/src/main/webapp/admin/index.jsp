@@ -16,7 +16,14 @@
 </head>
 <body class="bodycss">
 <!-- 상단 -->
-<%@ include file="./top.jsp" %>
+<%@ include file="./index_top.jsp" %>
 <!-- 상단 -->
+<section class="admin_bgcolor">
+<!-- 메인 -->
+
+<!-- 메인 -->
+<!-- 카피라이터 -->
+
+<!-- 카피라이터 -->
 </body>
 </html>
