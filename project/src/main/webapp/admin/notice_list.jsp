@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -26,6 +27,7 @@
 <section>
     <p>공지사항 관리페이지</p>
     <div class="subpage_view">
+    <form id="frm" method="post" action="./notice_viewok.do">
     <ul>
         <li><input type="checkbox"></li>
         <li>NO</li>
@@ -58,6 +60,7 @@
             <li><img src="./ico/right.svg"></li>
             <li><img src="./ico/double_right.svg"></li>
         </ul>
+        </form>
     </div>
 </section>
 </main>
@@ -68,4 +71,6 @@
     </div>
 </footer>
 </body>
+<script src="./notice.js?v=1"></script>
+
 </html>
