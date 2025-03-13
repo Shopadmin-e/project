@@ -15,6 +15,8 @@
 <link rel="icon" href="./img/logo.png" sizes="16x16">
 </head>
 <body class="bodycss">
-테스트
+<!-- 상단 -->
+<%@ include file="./top.jsp" %>
+<!-- 상단 -->
 </body>
 </html>
