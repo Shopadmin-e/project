@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 
 // 데이터베이스
 
+
 public class m_dbinfo {
 
 	public static Connection getConnection() throws Exception{
