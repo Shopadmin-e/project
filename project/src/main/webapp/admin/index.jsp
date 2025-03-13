@@ -20,10 +20,11 @@
 <!-- 상단 -->
 <section class="admin_bgcolor">
 <!-- 메인 -->
-
+<%@ include file="./index_main.jsp" %>
 <!-- 메인 -->
+</section>
 <!-- 카피라이터 -->
-
+<%@ include file="./copyright.jsp" %>
 <!-- 카피라이터 -->
 </body>
 </html>
