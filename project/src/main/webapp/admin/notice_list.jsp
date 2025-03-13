@@ -26,8 +26,8 @@
 <main class="maincss">
 <section>
     <p>공지사항 관리페이지</p>
-    <div class="subpage_view">
     <form id="frm" method="post" action="./notice_viewok.do">
+    <div class="subpage_view">
     <ul>
         <li><input type="checkbox"></li>
         <li>NO</li>
@@ -60,11 +60,10 @@
             <li><img src="./ico/right.svg"></li>
             <li><img src="./ico/double_right.svg"></li>
         </ul>
-        </form>
     </div>
+     </form>
 </section>
 </main>
-
 <footer class="main_copyright">
     <div>
         Copyright ⓒ 2024 shopbag All rights reserved.

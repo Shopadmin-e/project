@@ -20,5 +20,4 @@
 		<url-pattern>/project/notice_listok.do</url-pattern>
 	</servlet-mapping>
 
-
 </web-app>

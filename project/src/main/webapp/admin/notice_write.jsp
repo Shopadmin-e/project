@@ -24,8 +24,8 @@
 <main class="maincss">
 <section>
     <p>공지사항 등록페이지</p>
-<div class="write_view">
 <form id="frm" method="post" action="./notice_listok.do">
+<div class="write_view">
 <ul>
     <li>공지사항 여부</li>
     <li>
@@ -57,9 +57,11 @@
     </li>
 </ul>
 </div>
+<!-- button의 기본 type은 submit으로, 지정해주지 않으면 자동으로 제출해버림
+따라서 type을 button으로 지정해주어야 함 -->
 <div class="board_btn">
-    <button class="border_del" onclick="list()">공지목록</button>
-    <button class="border_add" onclick="sign()">공지등록</button>
+    <button class="border_del" type="button" onclick="list()">공지목록</button>
+    <button class="border_add" type="button" onclick="sign()">공지등록</button>
 </div>
 </form>
 </section>
