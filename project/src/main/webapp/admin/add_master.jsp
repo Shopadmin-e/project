@@ -7,6 +7,37 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>관리자 등록 페이지</title>
+<script src="./js/jquery.js"></script>
+<script>
+$(function(){
+	var $data;
+	$("btn").click(function(){
+		var $mid = $("#mid").val();
+		if($mid == ""){
+			alert("아이디를 입력하세요.");
+		}
+		else{
+			$jax({
+				url : "./admin/idcheck.do?mid="+$mid,
+				cache : false,
+				type : "GET",
+				dataType : "HTML",
+				success : function($data){
+					if($data == "ok"){
+						alert("사용 가능한 아이디 입니다.");
+					}
+					else{
+						alert("사용 불가능한 아이디 입니다.");
+					}
+				},
+				error : function(){
+					alert("통신 에러");
+				}
+			});
+		}
+	});
+});
+</script>
 <link rel="stylesheet" type="text/css" href="./css/basic.css">
 <link rel="stylesheet" type="text/css" href="./css/login.css?v=1">
 <link rel="icon" href="./img/logo.png" sizes="128x128">
@@ -19,14 +50,14 @@
 	<p><img src="./img/logo.png" class="logo_sm"> ADMINISTRATOR ADD</p>
 </header>
 
-<section class="admin_bgcolor_add">
-	<form>
+<form id="frm" method="post" action="">
+	<section class="admin_bgcolor_add">
 		<div class="admin_login_add">
 			<ul>
 				<li class="font_color1">아이디 및 패스워드 정보</li>
 				<li>
-					<input type="text" name="mid" class="add_input1" placeholder="생성할 관리자 아이디를 입력하세요">
-					<button type="button" class="btn_button" onclick="idck()">중복체크</button>
+					<input type="text" name="mid" id="mid" class="add_input1" placeholder="생성할 관리자 아이디를 입력하세요">
+					<button type="button" class="btn_button" id="btn">중복체크</button>
 				</li>
 				<li>
 					<input type="text" name="mpass" class="add_input1" placeholder="접속할 패스워드를 입력하세요">
@@ -73,8 +104,8 @@
 				<button type="button" class="btn_button btncolor2" title="관리자 취소" onclick="">등록 취소</button>
 			</span>
 		</div>
-	</form>
-</section>
+	</section>
+</form>
 
 <footer class="admin_copy">
 	<div>
