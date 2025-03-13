@@ -3,6 +3,7 @@ package admin;
 import java.security.MessageDigest;
 
 // 비밀번호 암호화
+
 public class m_md5 {
 	public String md5_code(String pw) throws Exception{
 		StringBuilder sb = new StringBuilder();
