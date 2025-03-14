@@ -14,7 +14,6 @@ public class m_dbinfo {
 		
 		Class.forName(db_driver);
 		Connection con = DriverManager.getConnection(db_url, db_user, db_passwd);
-		System.out.println(con);
 		
 		return con;
 	}

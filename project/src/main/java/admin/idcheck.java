@@ -37,7 +37,7 @@ public class idcheck extends HttpServlet {
 				m_dbinfo db = new m_dbinfo();
 				this.con = db.getConnection();	// DB 연결
 				
-				this.sql = "select count(*) as ctn from ad_join where mid=" + id + "";
+				this.sql = "select count(*) as ctn from ad_join where mid='" + id + "';";
 				this.st = this.con.createStatement();
 				this.rs = this.st.executeQuery(this.sql);
 				

@@ -7,37 +7,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>관리자 등록 페이지</title>
-<script src="./js/jquery.js"></script>
-<script>
-$(function(){
-	var $data;
-	$("btn").click(function(){
-		var $mid = $("#mid").val();
-		if($mid == ""){
-			alert("아이디를 입력하세요.");
-		}
-		else{
-			$jax({
-				url : "./admin/idcheck.do?mid="+$mid,
-				cache : false,
-				type : "GET",
-				dataType : "HTML",
-				success : function($data){
-					if($data == "ok"){
-						alert("사용 가능한 아이디 입니다.");
-					}
-					else{
-						alert("사용 불가능한 아이디 입니다.");
-					}
-				},
-				error : function(){
-					alert("통신 에러");
-				}
-			});
-		}
-	});
-});
-</script>
 <link rel="stylesheet" type="text/css" href="./css/basic.css">
 <link rel="stylesheet" type="text/css" href="./css/login.css?v=1">
 <link rel="icon" href="./img/logo.png" sizes="128x128">
@@ -57,7 +26,7 @@ $(function(){
 				<li class="font_color1">아이디 및 패스워드 정보</li>
 				<li>
 					<input type="text" name="mid" id="mid" class="add_input1" placeholder="생성할 관리자 아이디를 입력하세요">
-					<button type="button" class="btn_button" id="btn">중복체크</button>
+					<button type="button" name="mid_ch" class="btn_button" onclick="idch()">중복체크</button>
 				</li>
 				<li>
 					<input type="text" name="mpass" class="add_input1" placeholder="접속할 패스워드를 입력하세요">
@@ -100,8 +69,8 @@ $(function(){
 				<li class="font_color1">※ 가입완료 후 전산 담당자가 확인 후 로그인 할 수 있습니다.</li>
 			</ul>
 			<span class="admin_addbtn">
-				<button type="button" class="btn_button btncolor1" title="관리자 등록" onclick="">관리자 등록</button>
-				<button type="button" class="btn_button btncolor2" title="관리자 취소" onclick="">등록 취소</button>
+				<button type="button" class="btn_button btncolor1" title="관리자 등록" onclick="add_m()">관리자 등록</button>
+				<button type="button" class="btn_button btncolor2" title="관리자 취소" onclick="add_c()">등록 취소</button>
 			</span>
 		</div>
 	</section>
@@ -113,5 +82,5 @@ $(function(){
 	</div>
 </footer>
 </body>
-<script src="./js/add_master.js?v=2"></script>
+<script src="./js/add_master.js?v=3"></script>
 </html>
