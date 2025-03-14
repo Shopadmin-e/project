@@ -23,8 +23,8 @@ function ajaxpost(data){
 			if(this.response == "ok"){	// ok 값이 전송되었을 때
 				alert("사용가능한 아이디입니다.");
 				frm.mid.readOnly = true;	// 아이디를 더 이상 수정하지 않음
-				frm.mid_ch.value == "Y";
-				console.log(frm.mid_ch.value);
+				frm.mid_ch.value = "Y";
+				// console.log(frm.mid_ch.value);
 			}
 			else if(this.response == "no"){	// no 값이 전송되었을 때
 				alert("해당 아이디는 이미 사용 중입니다.");
@@ -41,6 +41,7 @@ function ajaxpost(data){
 
 // 관리자 등록 버튼
 function add_m(){
+	
 }
 
 // 등록 취소 버튼
