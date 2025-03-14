@@ -25,12 +25,12 @@
 			<ul>
 				<li class="font_color1">아이디 및 패스워드 정보</li>
 				<li>
-					<input type="text" name="mid" id="mid" class="add_input1" placeholder="생성할 관리자 아이디를 입력하세요">
+					<input type="text" name="mid" class="add_input1" placeholder="생성할 관리자 아이디를 입력하세요">
 					<button type="button" name="mid_ch" class="btn_button" onclick="idch()">중복체크</button>
 				</li>
 				<li>
 					<input type="text" name="mpass" class="add_input1" placeholder="접속할 패스워드를 입력하세요">
-					<input type="text" id="mpass2" class="add_input1" placeholder="동일한 패스워드를 입력하세요">
+					<input type="text" name="mpass2" class="add_input1" placeholder="동일한 패스워드를 입력하세요">
 				</li>
 				<li class="font_color1">관리자 기본정보 입력</li>
 				<li>
@@ -49,7 +49,7 @@
 				<li class="font_color1">관리자 담당부서 및 직책</li>
 				<li>
 					<select class="add_select1" name="dep">
-						<option>담당자 부서를 선택하세요</option>
+						<option value="">담당자 부서를 선택하세요</option>
 						<option value="임원">임원</option>
 						<option value="전산팀">전산팀</option>
 						<option value="디자인팀">디자인팀</option>
@@ -57,7 +57,7 @@
 						<option value="MD팀">MD팀</option>
 					</select>
 					<select class="add_select1" name="pos">
-						<option>담당자 직책을 선택하세요</option>
+						<option value="">담당자 직책을 선택하세요</option>
 						<option value="대표">대표</option>
 						<option value="부장">부장</option>
 						<option value="팀장">팀장</option>
