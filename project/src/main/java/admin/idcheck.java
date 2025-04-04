@@ -3,8 +3,8 @@ package admin;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -18,7 +18,7 @@ public class idcheck extends HttpServlet {
 
 	Connection con = null;
 	PrintWriter pw = null;
-	Statement st = null;
+	PreparedStatement ps = null;
 	ResultSet rs = null;
 	String sql;
 	
@@ -37,17 +37,21 @@ public class idcheck extends HttpServlet {
 				m_dbinfo db = new m_dbinfo();
 				this.con = db.getConnection();	// DB 연결
 				
-				this.sql = "select count(*) as ctn from ad_join where mid='" + id + "';";
-				this.st = this.con.createStatement();
-				this.rs = this.st.executeQuery(this.sql);
+				this.sql = "select count(*) as ctn from allow_ad where aid=?";
+				this.ps = this.con.prepareStatement(this.sql);
+				this.ps.setString(1, id);
+				this.rs = this.ps.executeQuery();
 				
 				if(rs.next() == true) {	// 정상적으로 Query 문이 작동되었을 경우
 					if(rs.getString("ctn").equals("0")) {	// 해당 데이터가 없을 경우
 						msg = "ok";
 					}
+					else {	// 검색한 데이터가 있을 경우
+						msg = "no";
+					}
 				}
-				else {	// 검색한 데이터가 있을 경우
-					msg = "no";
+				else {
+					msg = "error";
 				}
 			}
 			pw.write(msg);
@@ -63,7 +67,7 @@ public class idcheck extends HttpServlet {
 		finally {
 			try {
 				this.rs.close();
-				this.st.close();
+				this.ps.close();
 				this.con.close();
 				this.pw.close();
 			}
