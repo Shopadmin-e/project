@@ -1,14 +1,6 @@
-/*var border_add = document.getElementsByClassName("border_add")[0];
-var border_del = document.getElementsByClassName("border_del")[1];
-
-border_add.addEventListener("click", function(){
-	alert("공지사항 등록");
-})
-border_del.addEventListener("click", function(){
-	alert("공지사항 삭제");
-})*/
-
-function sign(){
+//notice_writeok.jsp
+//공지사항 등록
+function signin(){
 	if(frm.mtitle.value==""){
 		alert("제목을 입력하세요");
 		frm.mtitle.focus();
@@ -26,12 +18,16 @@ function sign(){
 			return false;			
 		}
 		else{
+			//location.href = "http://localhost:8080/project/admin/notice_list.jsp"
 			frm.submit();
+			
 		}
 	}
 }
 
+//공지사항 목록으로 되돌아감
 function list(){
 	alert("목록으로 돌아가시겠습니까? 작성된 정보는 전부 지워집니다.");
+	//location.href = "http://localhost:8080/project/admin/notice_list.jsp"
 	frm.submit();
 }

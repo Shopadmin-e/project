@@ -11,13 +11,24 @@
 		<url-pattern>/admin/idcheck.do</url-pattern>
 	</servlet-mapping>
 
+
 	<servlet>
 		<servlet-name>notice_listok</servlet-name>
-		<servlet-class>project.notice_listok</servlet-class>
+		<servlet-class>admin.notice_listok</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>notice_listok</servlet-name>
-		<url-pattern>/project/notice_listok.do</url-pattern>
+		<url-pattern>/admin/notice_listok.do</url-pattern>
+	</servlet-mapping>
+
+	
+	<servlet>
+		<servlet-name>notice_writeok</servlet-name>
+		<servlet-class>admin.notice_writeok</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>notice_writeok</servlet-name>
+		<url-pattern>/admin/notice_writeok.do</url-pattern>
 	</servlet-mapping>
 
 </web-app>
