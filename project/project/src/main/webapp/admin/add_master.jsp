@@ -1,5 +1,9 @@
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	Date date = new Date();
+%>    
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -8,7 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>관리자 등록 페이지</title>
 <link rel="stylesheet" type="text/css" href="./css/basic.css">
-<link rel="stylesheet" type="text/css" href="./css/login.css?v=1">
+<link rel="stylesheet" type="text/css" href="./css/login.css?v=<%=date%>">
 <link rel="icon" href="./img/logo.png" sizes="128x128">
 <link rel="icon" href="./img/logo.png" sizes="64x64">
 <link rel="icon" href="./img/logo.png" sizes="32x32">
@@ -19,18 +23,18 @@
 	<p><img src="./img/logo.png" class="logo_sm"> ADMINISTRATOR ADD</p>
 </header>
 
-<form id="frm" method="post" action="">
+<form id="frm" method="post" action="./add_masterok.do">
 	<section class="admin_bgcolor_add">
 		<div class="admin_login_add">
 			<ul>
 				<li class="font_color1">아이디 및 패스워드 정보</li>
 				<li>
 					<input type="text" name="mid" class="add_input1" placeholder="생성할 관리자 아이디를 입력하세요">
-					<button type="button" name="mid_ch" class="btn_button" onclick="idch()">중복체크</button>
+					<button type="button" name="mid_ch" value="N" class="btn_button" onclick="idch()">중복체크</button>
 				</li>
 				<li>
-					<input type="text" name="mpass" class="add_input1" placeholder="접속할 패스워드를 입력하세요">
-					<input type="text" name="mpass2" class="add_input1" placeholder="동일한 패스워드를 입력하세요">
+					<input type="password" name="mpass" class="add_input1" placeholder="접속할 패스워드를 입력하세요">
+					<input type="password" name="mpass2" class="add_input1" placeholder="동일한 패스워드를 입력하세요">
 				</li>
 				<li class="font_color1">관리자 기본정보 입력</li>
 				<li>
@@ -82,5 +86,5 @@
 	</div>
 </footer>
 </body>
-<script src="./js/add_master.js?v=3"></script>
+<script src="./js/add_master.js?v=<%=date%>"></script>
 </html>
