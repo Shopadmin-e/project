@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form id="frm">
+날짜선택: <input type="date" name="rdate"><br> <!-- 2025-04-02 -->
+<input type="button" value="예메" onclick="datecheck()">
+</form>
+</body>
+<script>
+function datecheck(){
+	var day = new Date();
+	var edate = day.getFullYear() + "-" + day.getMonth()+1 + "-" + day.getDate()
+	console.log(edate);
+	var sdate = frm.rdate.value.replaceAll("-","");
+	console.log(sdate);
+}
+</script>
+</html>

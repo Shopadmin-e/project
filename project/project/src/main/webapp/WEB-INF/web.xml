@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>project</display-name>
+
+	<servlet>
+		<servlet-name>idcheck</servlet-name>
+		<servlet-class>admin.idcheck</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>idcheck</servlet-name>
+		<url-pattern>/admin/idcheck.do</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>notice_listok</servlet-name>
+		<servlet-class>admin.notice_listok</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>notice_listok</servlet-name>
+		<url-pattern>/admin/notice_listok.do</url-pattern>
+	</servlet-mapping>
+
+	
+	<servlet>
+		<servlet-name>notice_writeok</servlet-name>
+		<servlet-class>admin.notice_writeok</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>notice_writeok</servlet-name>
+		<url-pattern>/admin/notice_writeok.do</url-pattern>
+	</servlet-mapping>
+
+</web-app>
