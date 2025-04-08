@@ -14,7 +14,6 @@ public class adminok extends HttpServlet {
 
 	PrintWriter pw = null;
 	
-	m_dbinfo db = new m_dbinfo();	// 데이터베이스
 	allow_member dto = new allow_member();	// 승인 DTO
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

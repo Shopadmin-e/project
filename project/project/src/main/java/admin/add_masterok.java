@@ -10,10 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 
 public class add_masterok extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+
 	PrintWriter pw = null;
 
-	m_dbinfo db = new m_dbinfo();	// 데이터베이스
 	add_member dto = new add_member();	// DTO
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

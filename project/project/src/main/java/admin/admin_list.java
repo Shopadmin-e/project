@@ -33,7 +33,7 @@ public class admin_list extends HttpServlet {
 					+ "location='./index.jsp';"
 					+ "</script>");
 		}
-		else {	// 로그인하여 사이트에 접근시 
+		else {	// 로그인하여 사이트에 접근시
 			String pageno = request.getParameter("pageno");	// 사용자가 클릭한 페이지 번호
 			
 			if(pageno == null || pageno.equals("1")) {	// 최초 게시판 접속시 페이지 배열 번호를 0으로 처리
