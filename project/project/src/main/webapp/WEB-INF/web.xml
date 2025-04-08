@@ -2,6 +2,51 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
   <display-name>project</display-name>
 
+  	<servlet>
+		<servlet-name>admin_loginok</servlet-name>
+		<servlet-class>admin.admin_loginok</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>admin_loginok</servlet-name>
+		<url-pattern>/admin/admin_loginok.do</url-pattern>
+	</servlet-mapping>
+  
+  	<servlet>
+		<servlet-name>adminno</servlet-name>
+		<servlet-class>admin.adminno</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminno</servlet-name>
+		<url-pattern>/admin/adminno.do</url-pattern>
+	</servlet-mapping>  
+  
+  	<servlet>
+		<servlet-name>adminok</servlet-name>
+		<servlet-class>admin.adminok</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminok</servlet-name>
+		<url-pattern>/admin/adminok.do</url-pattern>
+	</servlet-mapping>
+  
+  	<servlet>
+		<servlet-name>admin_list</servlet-name>
+		<servlet-class>admin.admin_list</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>admin_list</servlet-name>
+		<url-pattern>/admin/admin_list.do</url-pattern>
+	</servlet-mapping>
+  
+	<servlet>
+		<servlet-name>add_masterok</servlet-name>
+		<servlet-class>admin.add_masterok</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>add_masterok</servlet-name>
+		<url-pattern>/admin/add_masterok.do</url-pattern>
+	</servlet-mapping>
+
 	<servlet>
 		<servlet-name>idcheck</servlet-name>
 		<servlet-class>admin.idcheck</servlet-class>
