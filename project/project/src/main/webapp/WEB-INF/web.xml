@@ -75,5 +75,12 @@
 		<servlet-name>notice_writeok</servlet-name>
 		<url-pattern>/admin/notice_writeok.do</url-pattern>
 	</servlet-mapping>
-
+	<servlet>
+		<servlet-name>admin_siteinfook</servlet-name>
+		<servlet-class>admin.admin_siteinfook</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>admin_siteinfook</servlet-name>
+		<url-pattern>/admin/admin_siteinfook.do</url-pattern>
+	</servlet-mapping>
 </web-app>
